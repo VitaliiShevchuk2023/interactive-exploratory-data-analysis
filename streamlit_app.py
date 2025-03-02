@@ -137,12 +137,22 @@ if uploaded_file is not None:
         ss = pd.concat([nc,ss]).copy()
         st.dataframe(ss, use_container_width=True)
 
-    #Показ кількості значень об'єктних полів
+    # Додайте перевірку перед рядком з помилкою
     elif selected == 'Підрахунок значень полів':
-        # створення радіо-кнопки та бічної панелі одночасно, якщо вибрана ця основна опція
-        sub_selected = st.sidebar.radio( "*Яке поле слід дослідити?*",data.select_dtypes('object').columns)
-        vc = data[sub_selected].value_counts().reset_index().rename(columns={'count':'Кількість'}).reset_index(drop=True)
-        st.dataframe(vc, use_container_width=True,hide_index=True)
+        # Перевірка чи є стовпці типу object
+        object_columns = data.select_dtypes('object').columns
+        if len(object_columns) == 0:
+            st.warning("У даних немає текстових стовпців для аналізу.")
+        else:
+            # Створення радіо-кнопки та вибір стовпця
+            sub_selected = st.sidebar.radio("*Яке поле слід дослідити?*", object_columns)
+            
+            # Перевірка чи існує вибраний стовпець
+            if sub_selected in data.columns:
+                vc = data[sub_selected].value_counts().reset_index().rename(columns={sub_selected:'Значення', 'count':'Кількість'}).reset_index(drop=True)
+                st.dataframe(vc, use_container_width=True, hide_index=True)
+            else:
+                st.error(f"Стовпець '{sub_selected}' не знайдено. Доступні стовпці: {', '.join(data.columns)}")
 
     #Показ розмірів таблиці даних
     else:
