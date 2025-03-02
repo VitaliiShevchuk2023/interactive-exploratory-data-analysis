@@ -32,11 +32,7 @@ with st.container():
     with col1:
         st.markdown("### Додаток для розвідувального аналізу даних")
         
-    #Встановлюємо логотип
-    with col2:
-        niv_logo = Image.open(images_path + '/Social Logo.png')
-        st.image(niv_logo, width=200, output_format='auto')
-
+    
 st.sidebar.write("****А) Завантаження файлу****")
 
 #Запит користувача для вибору типу файлу
