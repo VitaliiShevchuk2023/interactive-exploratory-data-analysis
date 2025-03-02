@@ -16,7 +16,7 @@ from PIL import Image
 #Отримуємо шлях до зображень
 cwd_dir = os.path.dirname(__file__)
 rel_path = './images'
-#images_path = os.path.join(cwd_dir,rel_path)
+images_path = os.path.join(cwd_dir,rel_path)
 #logo = Image.open(images_path + '/Browser Icon Reverse.png')
 
 #Налаштування сторінки Streamlit
