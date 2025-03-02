@@ -20,7 +20,9 @@ images_path = os.path.join(cwd_dir,rel_path)
 #logo = Image.open(images_path + '/Browser Icon Reverse.png')
 
 #Налаштування сторінки Streamlit
-st.set_page_config(page_title = 'Додаток для розвідувального аналізу даних',page_icon = logo,layout = "wide")
+#st.set_page_config(page_title = 'Додаток для розвідувального аналізу даних',page_icon = logo,layout = "wide")
+st.set_page_config(page_title = 'Додаток для розвідувального аналізу даних',layout = "wide")
+
 
 #Створюємо контейнер з колонками для заголовка сторінки, конкретного заголовка та логотипу
 with st.container():
