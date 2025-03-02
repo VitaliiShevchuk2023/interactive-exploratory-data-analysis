@@ -17,10 +17,10 @@ from PIL import Image
 cwd_dir = os.path.dirname(__file__)
 rel_path = './images'
 images_path = os.path.join(cwd_dir,rel_path)
-#logo = Image.open(images_path + '/Browser Icon Reverse.png')
+
 
 #Налаштування сторінки Streamlit
-#st.set_page_config(page_title = 'Додаток для розвідувального аналізу даних',page_icon = logo,layout = "wide")
+
 st.set_page_config(page_title = 'Додаток для розвідувального аналізу даних',layout = "wide")
 
 
