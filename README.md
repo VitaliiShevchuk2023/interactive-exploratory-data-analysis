@@ -185,20 +185,12 @@ if uploaded_file is not None:
 - Документація PyGWalker для створення візуалізацій
 - Платформа Streamlit Community Cloud для розгортання додатків
 - How to Build An Interactive Exploratory Data Analysis Application Using Python and Streamlit, https://medium.com/@nivanthab/how-to-build-an-interactive-exploratory-data-analysis-application-using-python-and-streamlit-4b569acee935
+- How to explore data in Python with PyGWalker and Streamlit, https://www.youtube.com/watch?v=rprn79wfB9E
+- PyGWalker for Exploratory Data Analysis In Jupyter Notebooks, https://www.youtube.com/watch?v=3WjWeH3HIMo
+- Quick intro to PyGWalker, turn your dataframe into an interactive UI for data visualization, https://www.youtube.com/watch?v=m9xszlY8Z8A
+- A Tableau Alternative in Python for Data Analysis (in Streamlit & Jupyter) | PyGWalker Tutorial, https://www.youtube.com/watch?v=Ynt7Etci1KU
+- Create Tableau like Interactive Dashboards in Python for Free!, https://www.youtube.com/watch?v=6qymrlkkUG4
 
 
 
 
-### How to run it on your own machine
-
-1. Install the requirements
-
-   ```
-   $ pip install -r requirements.txt
-   ```
-
-2. Run the app
-
-   ```
-   $ streamlit run streamlit_app.py
-   ```
